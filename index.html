@@ -48,7 +48,13 @@
             We're working hard to finish the development of this site. Enter
             your email address for more information, We will get back you soon!
           </p>
-          <form netlify id="contactForm">
+          <form
+            id="contactForm"
+            name="contactForm"
+            method="POST"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+          >
             <!-- Email address input-->
             <div class="row input-group-newsletter">
               <div class="col">
@@ -56,6 +62,7 @@
                   class="form-control"
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="email address..."
                   aria-label="email address..."
                   required
